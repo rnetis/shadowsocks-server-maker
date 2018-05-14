@@ -24,7 +24,7 @@ var server = http.createServer(function (req, res) {
 				var comm = "ssserver -s "+ serv +" -p " + port + " " + arr;
 				//console.log(comm);
 				var pass = arr.replace("-k", "");
-				body = "Your shadowsocks vpn server run on 104.152.185.190:" + port + "\nAnd your password is " + pass;
+				body = "Your shadowsocks vpn server run on " + serv + ":" + port + "\nAnd your password is " + pass;
 				nodecmd.run(comm)
 			}
         });
