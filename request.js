@@ -4,7 +4,7 @@ var nodecmd = require('node-cmd');
 
 var server = http.createServer(function (req, res) {
 	
-	var serv = "104.152.185.190"; //your server ip
+	var serv = ""; //your server ip
 	
 	function getRndInteger(min, max) {
 		return Math.floor(Math.random() * (max - min)) + min;
