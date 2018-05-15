@@ -21,7 +21,8 @@ var server = http.createServer(function (req, res) {
 				var port = getRndInteger(1000, 9999);
 				//var comm = "ssserver -p " + port + " " + arr + " -d start";
 				var pass = arr.replace("-k", "");
-				var comm = Buffer.from("add: {'server_port': "+ port +", 'password': "+ pass +"}");
+				var mess = "add: {'server_port': "+ port +", 'password': "+ pass +"}";
+				var comm = Buffer.from(mess);
 				const client = dgram.createSocket('udp4');
 				console.log(comm);
 				
